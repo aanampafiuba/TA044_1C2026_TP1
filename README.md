@@ -24,4 +24,4 @@ competencia.
 
 ### 📂 Diagramas
 Diagramas necesarios para comprender la arquitectura del programa y el modelo de datos utilizado en él. Cada documento esta seccionado por pestañas que facilitan la visualización de cada una de las partes.
-- ([Entidad - Relación](https://drive.google.com/file/d/1RyxlaY8xZgTkP0GO__BAeafVBnZv1DK4/view?usp=sharing))  
+- [Entidad - Relación](https://drive.google.com/file/d/1RyxlaY8xZgTkP0GO__BAeafVBnZv1DK4/view?usp=sharing)  
