@@ -7,7 +7,8 @@
 
 ### 👥 Integrantes
 - **Alisson Anampa** — 111966  
-- **Jesús Fernández** — 111726  
+- **Jesús Fernández** — 111726
+- **Sebastian Colazo** — 111737
 
 ---
 
