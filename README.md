@@ -28,6 +28,6 @@ competencia.
 Diagramas necesarios para comprender la arquitectura del programa y el modelo de datos utilizado en él. Cada documento esta seccionado por pestañas que facilitan la visualización de cada una de las partes.
 - [Entidad - Relación](https://drive.google.com/file/d/1RyxlaY8xZgTkP0GO__BAeafVBnZv1DK4/view?usp=sharing)  
 
-###📋Modelo Relacional
+### 📋Modelo Relacional
 Pasaje a modelo relacional, se explica cada entidad y relacion, junto a sus claves candidatas, primarias y foraneas.
 - [Google Doc con Pasaje](https://docs.google.com/document/d/1T_MU2APWSBAcl63qbTVag2kHLtLHmzCkfd_wGm0wUjk/edit?usp=sharing)
