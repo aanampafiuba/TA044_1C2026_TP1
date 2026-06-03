@@ -14,3 +14,18 @@ values ('1','Gana local', '45111222'),
 
 --agregue 10 ejemplos basicos, igual el campo del DNI deberia tener sentido
 --con los ejemplos de insercion de la tabla usuarios
+
+
+-- Inserciones para la tabla: partidos
+
+-- Partidos del Torneo de Primera A 2026
+INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES 
+(1, '2026-05-10', 'Torneo de Primera A 2026'),
+(2, '2026-05-17', 'Torneo de Primera A 2026'),
+(3, '2026-05-24', 'Torneo de Primera A 2026');
+
+-- Partidos de la Copa Libertadores 2026
+INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES 
+(4, '2026-05-12', 'Copa Libertadores 2026'),
+(5, '2026-05-14', 'Copa Libertadores 2026'),
+(6, '2026-05-19', 'Copa Libertadores 2026');
