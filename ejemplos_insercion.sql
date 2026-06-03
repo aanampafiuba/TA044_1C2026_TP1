@@ -14,3 +14,31 @@ values ('1','Gana local', '45111222'),
 
 --agregue 10 ejemplos basicos, igual el campo del DNI deberia tener sentido
 --con los ejemplos de insercion de la tabla usuarios
+
+-- Inserciones para la tabla: juega_un
+
+-- Partidos del Torneo de Primera A 2026
+INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES 
+('River Plate', 'Argentina', 1, 2, 'Local'),
+('Boca Juniors', 'Argentina', 1, 1, 'Visitante');
+
+INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES 
+('Racing Club', 'Argentina', 2, 0, 'Local'),
+('San Lorenzo', 'Argentina', 2, 0, 'Visitante');
+
+INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES 
+('Boca Juniors', 'Argentina', 3, 3, 'Local'),
+('Racing Club', 'Argentina', 3, 2, 'Visitante');
+
+-- Partidos de la Copa Libertadores 2026
+INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES 
+('River Plate', 'Argentina', 4, 1, 'Local'),
+('Flamengo', 'Brasil', 4, 1, 'Visitante');
+
+INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES 
+('Palmeiras', 'Brasil', 5, 4, 'Local'),
+('Peñarol', 'Uruguay', 5, 0, 'Visitante');
+
+INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES 
+('Flamengo', 'Brasil', 6, 1, 'Local'),
+('Palmeiras', 'Brasil', 6, 2, 'Visitante');
