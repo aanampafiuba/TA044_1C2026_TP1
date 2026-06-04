@@ -16,6 +16,13 @@ create table pronosticos_deportivos(
   foreign key (DNI) references usuarios(DNI) on delete cascade
 );
 
+CREATE TABLE torneos(
+    nombre_torneo VARCHAR(100) NOT NULL
+    ,pais VARCHAR(100) NOT NULL
+    ,fecha_inicio DATE NOT NULL
+    ,fecha_final DATE NOT NULL
+    ,PRIMARY KEY(nombre_torneo)
+);
 
 CREATE TABLE partidos (
     id_partido INT,
