@@ -30,57 +30,44 @@ INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES
 (9, '2026-07-05', 'Torneo de Primera A 2026'),
 (10, '2026-07-12', 'Torneo de Primera A 2026');
 
--- Partidos de la Copa Libertadores 2026
-INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES 
-(11, '2026-05-12', 'Copa Libertadores 2026'),
-(12, '2026-05-14', 'Copa Libertadores 2026'),
-(13, '2026-05-19', 'Copa Libertadores 2026'),
-(14, '2026-05-21', 'Copa Libertadores 2026'),
-(15, '2026-05-26', 'Copa Libertadores 2026'),
-(16, '2026-05-28', 'Copa Libertadores 2026'),
-(17, '2026-06-02', 'Copa Libertadores 2026'),
-(18, '2026-06-04', 'Copa Libertadores 2026'),
-(19, '2026-06-09', 'Copa Libertadores 2026'),
-(20, '2026-06-11', 'Copa Libertadores 2026');
-
 -- Partidos de Brasileirao (Campeonato Brasileiro Serie A 2026)
 INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES
-(21, '2026-05-10', 'Campeonato Brasileiro Serie A 2026'),
-(22, '2026-05-17', 'Campeonato Brasileiro Serie A 2026'),
-(23, '2026-05-24', 'Campeonato Brasileiro Serie A 2026'),
-(24, '2026-05-31', 'Campeonato Brasileiro Serie A 2026'),
-(25, '2026-06-07', 'Campeonato Brasileiro Serie A 2026'),
-(26, '2026-06-14', 'Campeonato Brasileiro Serie A 2026');
+(11, '2026-05-10', 'Campeonato Brasileiro Serie A 2026'),
+(12, '2026-05-17', 'Campeonato Brasileiro Serie A 2026'),
+(13, '2026-05-24', 'Campeonato Brasileiro Serie A 2026'),
+(14, '2026-05-31', 'Campeonato Brasileiro Serie A 2026'),
+(15, '2026-06-07', 'Campeonato Brasileiro Serie A 2026'),
+(16, '2026-06-14', 'Campeonato Brasileiro Serie A 2026');
 
 -- Torneo uruguayo (Campeonato Uruguayo 2026)
 INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES
-(27, '2026-05-09', 'Campeonato Uruguayo 2026'),
-(28, '2026-05-16', 'Campeonato Uruguayo 2026'),
-(29, '2026-05-23', 'Campeonato Uruguayo 2026'),
-(30, '2026-05-30', 'Campeonato Uruguayo 2026');
+(17, '2026-05-09', 'Campeonato Uruguayo 2026'),
+(18, '2026-05-16', 'Campeonato Uruguayo 2026'),
+(19, '2026-05-23', 'Campeonato Uruguayo 2026'),
+(20, '2026-05-30', 'Campeonato Uruguayo 2026');
 
 -- Torneo chileno (Primera Division de Chile 2026)
 INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES
-(31, '2026-05-10', 'Primera Division de Chile 2026'),
-(32, '2026-05-17', 'Primera Division de Chile 2026'),
-(33, '2026-05-24', 'Primera Division de Chile 2026'),
-(34, '2026-05-31', 'Primera Division de Chile 2026');
+(21, '2026-05-10', 'Primera Division de Chile 2026'),
+(22, '2026-05-17', 'Primera Division de Chile 2026'),
+(23, '2026-05-24', 'Primera Division de Chile 2026'),
+(24, '2026-05-31', 'Primera Division de Chile 2026');
 
 -- Torneo paraguayo (Primera Division de Paraguay 2026)
 INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES
-(35, '2026-05-09', 'Primera Division de Paraguay 2026'),
-(36, '2026-05-16', 'Primera Division de Paraguay 2026'),
-(37, '2026-05-23', 'Primera Division de Paraguay 2026'),
-(38, '2026-05-30', 'Primera Division de Paraguay 2026');
+(25, '2026-05-09', 'Primera Division de Paraguay 2026'),
+(26, '2026-05-16', 'Primera Division de Paraguay 2026'),
+(27, '2026-05-23', 'Primera Division de Paraguay 2026'),
+(28, '2026-05-30', 'Primera Division de Paraguay 2026');
 
 -- Torneo español (La Liga 2026)
 INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES
-(39, '2026-05-03', 'La Liga 2026'),
-(40, '2026-05-10', 'La Liga 2026'),
-(41, '2026-05-17', 'La Liga 2026'),
-(42, '2026-05-24', 'La Liga 2026'),
-(43, '2026-05-31', 'La Liga 2026'),
-(44, '2026-06-07', 'La Liga 2026');
+(29, '2026-05-03', 'La Liga 2026'),
+(30, '2026-05-10', 'La Liga 2026'),
+(31, '2026-05-17', 'La Liga 2026'),
+(32, '2026-05-24', 'La Liga 2026'),
+(33, '2026-05-31', 'La Liga 2026'),
+(34, '2026-06-07', 'La Liga 2026');
 
 
 -- Insercion de equipos
@@ -183,215 +170,151 @@ INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
 ('Independiente', 'Argentina', 10, 0, 'Local'),
 ('Racing Club', 'Argentina', 10, 0, 'Visitante');
 
+--Partidos de Brasileirao
 
--- Partidos de la Copa Libertadores 2026
-
---Partido 11
+-- Partido 11
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('River Plate', 'Argentina', 11, 1, 'Local'),
-('Flamengo', 'Brasil', 11, 1, 'Visitante');
+('Flamengo', 'Brasil', 11, 3, 'Local'),
+('Palmeiras', 'Brasil', 11, 2, 'Visitante');
 
---Partido 12
-INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES 
-('Palmeiras', 'Brasil', 12, 4, 'Local'),
-('Peñarol', 'Uruguay', 12, 0, 'Visitante');
+-- Partido 12
+INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
+('Sao Paulo', 'Brasil', 12, 1, 'Local'),
+('Santos', 'Brasil', 12, 1, 'Visitante');
 
---Partido 13
-INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES 
-('Flamengo', 'Brasil', 13, 1, 'Local'),
-('Palmeiras', 'Brasil', 13, 2, 'Visitante');
+-- Partido 13
+INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
+('Gremio', 'Brasil', 13, 2, 'Local'),
+('Cruzeiro', 'Brasil', 13, 0, 'Visitante');
 
 -- Partido 14
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Nacional', 'Uruguay', 14, 1, 'Local'),
-('Boca Juniors', 'Argentina', 14, 2, 'Visitante');
+('Palmeiras', 'Brasil', 14, 0, 'Local'),
+('Sao Paulo', 'Brasil', 14, 0, 'Visitante');
 
 -- Partido 15
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Olimpia', 'Paraguay', 15, 2, 'Local'),
-('Cruzeiro', 'Brasil', 15, 1, 'Visitante');
+('Santos', 'Brasil', 15, 1, 'Local'),
+('Flamengo', 'Brasil', 15, 2, 'Visitante');
 
 -- Partido 16
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Colo-Colo', 'Chile', 16, 0, 'Local'),
-('Sao Paulo', 'Brasil', 16, 2, 'Visitante');
-
--- Partido 17
-INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Peñarol', 'Uruguay', 17, 1, 'Local'),
-('Independiente', 'Argentina', 17, 1, 'Visitante');
-
--- Partido 18
-INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Cerro Porteño', 'Paraguay', 18, 0, 'Local'),
-('River Plate', 'Argentina', 18, 2, 'Visitante');
-
--- Partido 19
-INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Universidad de Chile', 'Chile', 19, 2, 'Local'),
-('Santos', 'Brasil', 19, 1, 'Visitante');
-
--- Partido 20
-INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Libertad', 'Paraguay', 20, 1, 'Local'),
-('Gremio', 'Brasil', 20, 3, 'Visitante');
-
-
---Partidos de Brasileirao
-
--- Partido 21
-INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Flamengo', 'Brasil', 21, 3, 'Local'),
-('Palmeiras', 'Brasil', 21, 2, 'Visitante');
-
--- Partido 22
-INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Sao Paulo', 'Brasil', 22, 1, 'Local'),
-('Santos', 'Brasil', 22, 1, 'Visitante');
-
--- Partido 23
-INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Gremio', 'Brasil', 23, 2, 'Local'),
-('Cruzeiro', 'Brasil', 23, 0, 'Visitante');
-
--- Partido 24
-INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Palmeiras', 'Brasil', 24, 0, 'Local'),
-('Sao Paulo', 'Brasil', 24, 0, 'Visitante');
-
--- Partido 25
-INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Santos', 'Brasil', 25, 1, 'Local'),
-('Flamengo', 'Brasil', 25, 2, 'Visitante');
-
--- Partido 26
-INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Cruzeiro', 'Brasil', 26, 2, 'Local'),
-('Gremio', 'Brasil', 26, 1, 'Visitante');
+('Cruzeiro', 'Brasil', 16, 2, 'Local'),
+('Gremio', 'Brasil', 16, 1, 'Visitante');
 
 
 --Partidos Campeonato Uruguayo
 
--- Partido 27
+-- Partido 17
 INSERT INTO juega_un (nombre_equipo, pais, id_partido,打goles, rol) VALUES
-('Peñarol', 'Uruguay', 27, 2, 'Local'),
-('Nacional', 'Uruguay', 27, 1, 'Visitante');
+('Peñarol', 'Uruguay', 17, 2, 'Local'),
+('Nacional', 'Uruguay', 17, 1, 'Visitante');
 
--- Partido 28
+-- Partido 18
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Defensor Sporting', 'Uruguay', 28, 0, 'Local'),
-('Danubio', 'Uruguay', 28, 2, 'Visitante');
+('Defensor Sporting', 'Uruguay', 18, 0, 'Local'),
+('Danubio', 'Uruguay', 18, 2, 'Visitante');
 
--- Partido 29
+-- Partido 19
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Nacional', 'Uruguay', 29, 3, 'Local'),
-('Defensor Sporting', 'Uruguay', 29, 1, 'Visitante');
+('Nacional', 'Uruguay', 19, 3, 'Local'),
+('Defensor Sporting', 'Uruguay', 19, 1, 'Visitante');
 
--- Partido 30
+-- Partido 20
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Danubio', 'Uruguay', 30, 1, 'Local'),
-('Peñarol', 'Uruguay', 30, 1, 'Visitante');
+('Danubio', 'Uruguay', 20, 1, 'Local'),
+('Peñarol', 'Uruguay', 20, 1, 'Visitante');
 
 
 --Partidos de torneo Chileno
 
--- Partido 31
+-- Partido 21
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Colo-Colo', 'Chile', 31, 1, 'Local'),
-('Universidad de Chile', 'Chile', 31, 1, 'Visitante');
+('Colo-Colo', 'Chile', 21, 1, 'Local'),
+('Universidad de Chile', 'Chile', 21, 1, 'Visitante');
 
--- Partido 32
+-- Partido 22
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Universidad Catolica', 'Chile', 32, 3, 'Local'),
-('Cobreloa', 'Chile', 32, 0, 'Visitante');
+('Universidad Catolica', 'Chile', 22, 3, 'Local'),
+('Cobreloa', 'Chile', 22, 0, 'Visitante');
 
--- Partido 33
+-- Partido 23
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Universidad de Chile', 'Chile', 33, 2, 'Local'),
-('Universidad Catolica', 'Chile', 33, 1, 'Visitante');
+('Universidad de Chile', 'Chile', 23, 2, 'Local'),
+('Universidad Catolica', 'Chile', 23, 1, 'Visitante');
 
--- Partido 34
+-- Partido 24
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Cobreloa', 'Chile', 34, 0, 'Local'),
-('Colo-Colo', 'Chile', 34, 2, 'Visitante');
+('Cobreloa', 'Chile', 24, 0, 'Local'),
+('Colo-Colo', 'Chile', 24, 2, 'Visitante');
 
 --Partidos de torneo Paraguayo
 
--- Partido 35
+-- Partido 25
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Olimpia', 'Paraguay', 35, 1, 'Local'),
-('Cerro Porteño', 'Paraguay', 35, 0, 'Visitante');
+('Olimpia', 'Paraguay', 25, 1, 'Local'),
+('Cerro Porteño', 'Paraguay', 25, 0, 'Visitante');
 
--- Partido 36
+-- Partido 26
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Libertad', 'Paraguay', 36, 2, 'Local'),
-('Nacional', 'Paraguay', 36, 2, 'Visitante');
+('Libertad', 'Paraguay', 26, 2, 'Local'),
+('Nacional', 'Paraguay', 26, 2, 'Visitante');
 
--- Partido 37
+-- Partido 27
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Cerro Porteño', 'Paraguay', 37, 1, 'Local'),
-('Libertad', 'Paraguay', 37, 3, 'Visitante');
+('Cerro Porteño', 'Paraguay', 27, 1, 'Local'),
+('Libertad', 'Paraguay', 27, 3, 'Visitante');
 
--- Partido 38
+-- Partido 28
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Nacional', 'Paraguay', 38, 0, 'Local'),
-('Olimpia', 'Paraguay', 38, 0, 'Visitante');
+('Nacional', 'Paraguay', 28, 0, 'Local'),
+('Olimpia', 'Paraguay', 28, 0, 'Visitante');
 
 
 --Partidos de Liga Española
 
--- Partido 39
+-- Partido 29
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Real Madrid', 'España', 39, 3, 'Local'),
-('Barcelona', 'España', 39, 2, 'Visitante');
+('Real Madrid', 'España', 29, 3, 'Local'),
+('Barcelona', 'España', 29, 2, 'Visitante');
 
--- Partido 40
+-- Partido 30
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Atletico de Madrid', 'España', 40, 1, 'Local'),
-('Sevilla', 'España', 40, 0, 'Visitante');
+('Atletico de Madrid', 'España', 30, 1, 'Local'),
+('Sevilla', 'España', 30, 0, 'Visitante');
 
--- Partido 41
+-- Partido 31
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Real Betis', 'España', 41, 2, 'Local'),
-('Athletic Club', 'España', 41, 1, 'Visitante');
+('Real Betis', 'España', 31, 2, 'Local'),
+('Athletic Club', 'España', 31, 1, 'Visitante');
 
--- Partido 42
+-- Partido 32
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Barcelona', 'España', 42, 4, 'Local'),
-('Atletico de Madrid', 'España', 42, 2, 'Visitante');
+('Barcelona', 'España', 32, 4, 'Local'),
+('Atletico de Madrid', 'España', 32, 2, 'Visitante');
 
--- Partido 43
+-- Partido 33
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Sevilla', 'España', 43, 1, 'Local'),
-('Real Betis', 'España', 43, 1, 'Visitante');
+('Sevilla', 'España', 33, 1, 'Local'),
+('Real Betis', 'España', 33, 1, 'Visitante');
 
--- Partido 44
+-- Partido 34
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
-('Athletic Club', 'España', 44, 2, 'Local'),
-('Real Madrid', 'España', 44, 0, 'Visitante');
+('Athletic Club', 'España', 34, 2, 'Local'),
+('Real Madrid', 'España', 34, 0, 'Visitante');
 
 
 -- INSERCIONES pronosticos_partidos
 
 INSERT INTO pronosticos_partidos(nro_pronostico, id_partido) VALUES
-(1, 1),   -- Pronóstico 1 asociado al Partido 1 (Torneo Primera A)
-(2, 2),   -- Pronóstico 2 asociado al Partido 2 (Torneo Primera A)
-(3, 3),   -- Pronóstico 3 asociado al Partido 3 (Torneo Primera A)
-(4, 7),   -- Pronóstico 4 asociado al Partido 7 (Torneo Primera A)
-(5, 11),  -- Pronóstico 5 asociado al Partido 11 (Copa Libertadores)
-(6, 12),  -- Pronóstico 6 asociado al Partido 12 (Copa Libertadores)
-(7, 13),  -- Pronóstico 7 asociado al Partido 13 (Copa Libertadores)
-(8, 14),  -- Pronóstico 8 asociado al Partido 14 (Copa Libertadores)
-(9, 21),  -- Pronóstico 9 asociado al Partido 21 (Brasileirao)
-(10, 22), -- Pronóstico 10 asociado al Partido 22 (Brasileirao)
-(11, 23), -- Pronóstico 11 asociado al Partido 23 (Brasileirao)
-(12, 27), -- Pronóstico 12 asociado al Partido 27 (Torneo Uruguayo)
-(13, 28), -- Pronóstico 13 asociado al Partido 28 (Torneo Uruguayo)
-(14, 31), -- Pronóstico 14 asociado al Partido 31 (Torneo Chileno)
-(15, 32), -- Pronóstico 15 asociado al Partido 32 (Torneo Chileno)
-(16, 35), -- Pronóstico 16 asociado al Partido 35 (Torneo Paraguayo)
-(17, 36), -- Pronóstico 17 asociado al Partido 36 (Torneo Paraguayo)
-(18, 39), -- Pronóstico 18 asociado al Partido 39 (La Liga)
-(19, 40), -- Pronóstico 19 asociado al Partido 40 (La Liga)
-(20, 42); -- Pronóstico 20 asociado al Partido 42 (La Liga)
+(1, 1),   -- Pronóstico 1 asociado al Partido 1 (Torneo de Primera A - Arg)
+(2, 4),   -- Pronóstico 2 asociado al Partido 4 (Torneo de Primera A - Arg)
+(3, 10),  -- Pronóstico 3 asociado al Partido 10 (Torneo de Primera A - Arg)
+(4, 11),  -- Pronóstico 4 asociado al Partido 11 (Brasileirao - Bra)
+(5, 12),  -- Pronóstico 5 asociado al Partido 12 (Brasileirao - Bra)
+(6, 17),  -- Pronóstico 6 asociado al Partido 17 (Campeonato Uruguayo - Uru)
+(7, 21),  -- Pronóstico 7 asociado al Partido 21 (Torneo Chileno - Chi)
+(8, 25),  -- Pronóstico 8 asociado al Partido 25 (Torneo Paraguayo - Par)
+(9, 29),  -- Pronóstico 9 asociado al Partido 29 (La Liga - Esp)
+(10, 32); -- Pronóstico 10 asociado al Partido 32 (La Liga - Esp)
 
