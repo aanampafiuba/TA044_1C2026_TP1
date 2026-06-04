@@ -1,3 +1,7 @@
+--Registrar un equipo. (jesus)
+
+insert into equipos(nombre_equipo, pais, estadio) values
+('River Plate', 'Argentina', 'Mas Monumental');
 
 --Registrar un resultado de un partido (Sebastian):
 
