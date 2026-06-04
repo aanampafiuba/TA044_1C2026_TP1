@@ -14,3 +14,14 @@ values ('1','Gana local', '45111222'),
 
 --agregue 10 ejemplos basicos, igual el campo del DNI deberia tener sentido
 --con los ejemplos de insercion de la tabla usuarios
+INSERT INTO equipos(nombre_equipo, pais, estadio)
+VALUES ('Boca Juniors', 'Argentina', 'Alberto J. Armando'),
+       ('River Plate', 'Argentina', 'Mas Monumental'),
+       ('Independiente', 'Argentina', 'Estadio Libertadores de America - Ricardo Enrique Bochini'),
+       ('Racing Club', 'Argentina', 'Estadio Presidente Peron'),
+       ('San Lorenzo', 'Argentina', 'Estadio Pedro Bidegain'),
+       ('Nacional', 'Uruguay', 'Estadio Gran Parque Central'),
+       ('Nacional', 'Paraguay', 'Estadio Arsenio Erico'),
+       ('Peñarol', 'Uruguay', 'Estadio Campeon del Siglo'),
+       ('Colo-Colo', 'Chile', 'Estadio Monumental David Arellano'),
+       ('Universidad de Chile', 'Chile', 'Estadio Nacional Julio Martinez Pradanos');
