@@ -1,11 +1,19 @@
 --Tablas de Entidades--
+create table usuarios(
+    DNI int,
+    nombre varchar(32) not null,
+    fecha_nacimiento date,
+    email varchar(100) not null unique,
+    pais varchar(32) not null,
+    primary key (DNI)
+);
 
 create table pronosticos_deportivos(
   nro_pronostico int not null ,
   pronostico_resultado varchar(32) check ( pronostico_resultado in ('Gana local', 'Gana visitante', 'Empate')),
   DNI int not null,
   primary key(nro_pronostico),
-  foreign key (DNI) references usuarios(DNI)
+  foreign key (DNI) references usuarios(DNI) on delete cascade
 );
 
 
