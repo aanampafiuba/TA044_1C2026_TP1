@@ -39,3 +39,11 @@ CREATE TABLE juega_un (
     CONSTRAINT chk_juega_un_goles CHECK (goles >= 0), [cite: 39]
     CONSTRAINT chk_juega_un_rol CHECK (rol IN ('Local', 'Visitante'))
 );
+
+create table pronosticos_partidos(
+    nro_pronostico int not null,
+    id_partido int not null,
+    primary key (nro_pronostico,id_partido),
+    foreign key (nro_pronostico) references pronosticos_deportivos(nro_pronostico),
+    foreign key (id_partido) references partidos(id_partido)
+);
