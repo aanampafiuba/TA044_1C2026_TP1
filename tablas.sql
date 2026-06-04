@@ -26,11 +26,12 @@ CREATE TABLE partidos (
 );
 
 
-CREATE TABLE equipos(nombre_equipo VARCHAR(100),
-                     pais VARCHAR(50),
-                     estadio VARCHAR(100),
-                     PRIMARY KEY (nombre_equipo, pais)
-                    );
+CREATE TABLE equipos(
+    nombre_equipo VARCHAR(100),
+    pais VARCHAR(50),
+    estadio VARCHAR(100),
+    PRIMARY KEY (nombre_equipo, pais)
+);
 
 
 --Tablas de relaciones--
@@ -44,7 +45,7 @@ CREATE TABLE juega_un (
     CONSTRAINT pk_juega_un PRIMARY KEY (nombre_equipo, pais, id_partido),
     CONSTRAINT fk_juega_un_equipos FOREIGN KEY (nombre_equipo, pais) REFERENCES equipos(nombre_equipo, pais) on delete cascade ,
     CONSTRAINT fk_juega_un_partidos FOREIGN KEY (id_partido) REFERENCES partidos(id_partido) on delete cascade ,
-    CONSTRAINT chk_juega_un_goles CHECK (goles >= 0), [cite: 39]
+    CONSTRAINT chk_juega_un_goles CHECK (goles >= 0),
     CONSTRAINT chk_juega_un_rol CHECK (rol IN ('Local', 'Visitante'))
 );
 
