@@ -34,9 +34,9 @@ CREATE TABLE partidos (
 
 
 CREATE TABLE equipos(
-    nombre_equipo VARCHAR(100),
-    pais VARCHAR(50),
-    estadio VARCHAR(100),
+    nombre_equipo VARCHAR(100) NOT NULL,
+    pais VARCHAR(50) NOT NULL,
+    estadio VARCHAR(100) NOT NULL UNIQUE,
     PRIMARY KEY (nombre_equipo, pais)
 );
 
@@ -44,8 +44,8 @@ CREATE TABLE equipos(
 --Tablas de relaciones--
 
 CREATE TABLE juega_un (
-    nombre_equipo VARCHAR(100),
-    pais VARCHAR(50),
+    nombre_equipo VARCHAR(100) NOT NULL,
+    pais VARCHAR(50) NOT NULL,
     id_partido INT,
     goles INT NOT NULL,
     rol VARCHAR(20) NOT NULL,
