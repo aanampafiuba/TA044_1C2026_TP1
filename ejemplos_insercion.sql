@@ -29,3 +29,17 @@ INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES
 (4, '2026-05-12', 'Copa Libertadores 2026'),
 (5, '2026-05-14', 'Copa Libertadores 2026'),
 (6, '2026-05-19', 'Copa Libertadores 2026');
+
+-- Insercion de equipos
+
+INSERT INTO equipos(nombre_equipo, pais, estadio)
+VALUES ('Boca Juniors', 'Argentina', 'Alberto J. Armando'),
+       ('River Plate', 'Argentina', 'Mas Monumental'),
+       ('Independiente', 'Argentina', 'Estadio Libertadores de America - Ricardo Enrique Bochini'),
+       ('Racing Club', 'Argentina', 'Estadio Presidente Peron'),
+       ('San Lorenzo', 'Argentina', 'Estadio Pedro Bidegain'),
+       ('Nacional', 'Uruguay', 'Estadio Gran Parque Central'),
+       ('Nacional', 'Paraguay', 'Estadio Arsenio Erico'),
+       ('Peñarol', 'Uruguay', 'Estadio Campeon del Siglo'),
+       ('Colo-Colo', 'Chile', 'Estadio Monumental David Arellano'),
+       ('Universidad de Chile', 'Chile', 'Estadio Nacional Julio Martinez Pradanos');
