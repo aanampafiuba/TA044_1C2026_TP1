@@ -11,3 +11,9 @@ CREATE TABLE partidos (
     CONSTRAINT pk_partidos PRIMARY KEY (id_partido),
     CONSTRAINT fk_partidos_torneos FOREIGN KEY (nombre_torneo) REFERENCES torneos(nombre_torneo)
 );
+
+CREATE TABLE equipos(nombre_equipo VARCHAR(100),
+                     pais VARCHAR(50),
+                     estadio VARCHAR(100),
+                     PRIMARY KEY (nombre_equipo, pais)
+                    );
