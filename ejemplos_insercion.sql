@@ -1,4 +1,15 @@
 --INSERCIONES PARA TABLAS ENTIDADES
+--inserciones para tabla: usuarios
+insert into usuarios(DNI, nombre, fecha_nacimiento, email, pais) values
+(45111222, 'Jose Rios', '2004-05-05', 'jrios@gmail.com', 'Argentina'),
+(32874165, 'Maria Cruz', '1999-06-04', 'mgcruz1999@hotmail.com', 'Uruguay'),
+(38999123, 'Carlos Gómez', '1998-11-30', 'cgomez98@hotmail.com', 'Argentina'),
+(45778111, 'Ana Pereira', '2002-07-25', 'anapereira02@yahoo.com', 'Brasil'),
+(37222456, 'Santiago López', '2000-01-09', 'slopez2000@gmail.com', 'Paraguay'),
+(46655987, 'Valentina Torres', '2003-09-18', 'valetorres03@gmail.com', 'Uruguay'),
+(35566789, 'Martín Silva', '1997-02-22', 'msilva97@hotmail.com', 'Argentina'),
+(47899112, 'Camila Duarte', '2005-12-05', 'camidu05@gmail.com', 'Venezuela'),
+(36211478, 'Javier Morales', '1999-08-14', 'jmorales99@gmail.com', 'Perú');
 
 --Inseciones para tabla: pronosticos_deportivos
 --necesito modificar igual esto para cuando esten los ejemplos de insercion de usuarios
