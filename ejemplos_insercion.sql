@@ -1,3 +1,5 @@
+--INSERCIONES PARA TABLAS ENTIDADES
+
 --Inseciones para tabla pronosticos_deportivos
 
 insert into pronosticos_deportivos
@@ -14,6 +16,40 @@ values ('1','Gana local', '45111222'),
 
 --agregue 10 ejemplos basicos, igual el campo del DNI deberia tener sentido
 --con los ejemplos de insercion de la tabla usuarios
+
+-- Inserciones para la tabla: partidos
+
+-- Partidos del Torneo de Primera A 2026
+INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES 
+(1, '2026-05-10', 'Torneo de Primera A 2026'),
+(2, '2026-05-17', 'Torneo de Primera A 2026'),
+(3, '2026-05-24', 'Torneo de Primera A 2026');
+
+-- Partidos de la Copa Libertadores 2026
+INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES 
+(4, '2026-05-12', 'Copa Libertadores 2026'),
+(5, '2026-05-14', 'Copa Libertadores 2026'),
+(6, '2026-05-19', 'Copa Libertadores 2026');
+
+
+-- Insercion de equipos
+
+INSERT INTO equipos(nombre_equipo, pais, estadio)
+VALUES ('Boca Juniors', 'Argentina', 'Alberto J. Armando'),
+       ('River Plate', 'Argentina', 'Mas Monumental'),
+       ('Independiente', 'Argentina', 'Estadio Libertadores de America - Ricardo Enrique Bochini'),
+       ('Racing Club', 'Argentina', 'Estadio Presidente Peron'),
+       ('San Lorenzo', 'Argentina', 'Estadio Pedro Bidegain'),
+       ('Nacional', 'Uruguay', 'Estadio Gran Parque Central'),
+       ('Nacional', 'Paraguay', 'Estadio Arsenio Erico'),
+       ('Peñarol', 'Uruguay', 'Estadio Campeon del Siglo'),
+       ('Colo-Colo', 'Chile', 'Estadio Monumental David Arellano'),
+       ('Universidad de Chile', 'Chile', 'Estadio Nacional Julio Martinez Pradanos');
+
+
+
+
+--INSERCIONES PARA TABLAS RELACIONES
 
 -- Inserciones para la tabla: juega_un
 
@@ -42,3 +78,5 @@ INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
 INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES 
 ('Flamengo', 'Brasil', 6, 1, 'Local'),
 ('Palmeiras', 'Brasil', 6, 2, 'Visitante');
+
+
