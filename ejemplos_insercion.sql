@@ -1,4 +1,5 @@
 --INSERCIONES PARA TABLAS ENTIDADES
+
 --inserciones para tabla: usuarios
 insert into usuarios(DNI, nombre, fecha_nacimiento, email, pais) values
 (45111222, 'Jose Rios', '2004-05-05', 'jrios@gmail.com', 'Argentina'),
@@ -13,17 +14,27 @@ insert into usuarios(DNI, nombre, fecha_nacimiento, email, pais) values
 
 --Inseciones para tabla: pronosticos_deportivos
 --necesito modificar igual esto para cuando esten los ejemplos de insercion de usuarios
-insert into pronosticos_deportivos(nro_pronostico, pronostico_resultado, DNI) values
-('1','Gana local', '45111222'),
-('2','Gana local', '45111333'),
-('3','Empate', '45111444'),
-('4','Gana visitante', '45111555'),
-('5','Gana local', '45111666'),
-('6','Empate', '45111777'),
-('7','Gana visitante', '45111888'),
-('8','Gana local', '45111999'),
-('9','Gana visitante', '45222111'),
-('10','Empate', '45222333');
+INSERT INTO pronosticos_deportivos (nro_pronostico, pronostico_resultado, DNI) VALUES
+(1, 'Gana local', 45111222),      -- Pronóstico 1: José Rios apuesta al local en el Partido 1
+(2, 'Empate', 45111222),          -- Pronóstico 2: José Rios apuesta al empate en el Partido 4
+(3, 'Gana visitante', 32874165),  -- Pronóstico 3: Maria Cruz apuesta al visitante en el Partido 10
+(4, 'Gana local', 38999123),      -- Pronóstico 4: Carlos Gómez apuesta al local en el Partido 11
+(5, 'Empate', 37222456),          -- Pronóstico 5: Santiago López apuesta al empate en el Partido 12
+(6, 'Gana local', 46655987),      -- Pronóstico 6: Valentina Torres apuesta al local en el Partido 17
+(7, 'Gana visitante', 35566789),  -- Pronóstico 7: Martín Silva apuesta al visitante en el Partido 21
+(8, 'Gana local', 47899112),      -- Pronóstico 8: Camila Duarte apuesta al local en el Partido 25
+(9, 'Empate', 45111222),          -- Pronóstico 9: José Rios apuesta al empate en el Partido 29
+(10, 'Gana visitante', 32874165), -- Pronóstico 10: Maria Cruz apuesta al visitante en el Partido 32
+(11, 'Gana visitante', 38999123), -- Pronóstico 11: Carlos Gómez apuesta al visitante
+(12, 'Gana local', 45778111),     -- Pronóstico 12: Ana Pereira (suma su primer pronóstico)
+(13, 'Empate', 35566789),         -- Pronóstico 13: Martín Silva apuesta al empate
+(14, 'Gana local', 47899112),     -- Pronóstico 14: Camila Duarte apuesta al local
+(15, 'Gana visitante', 45111222), -- Pronóstico 15: Jose Rios suma otra jugada
+(16, 'Empate', 32874165),         -- Pronóstico 16: Maria Cruz apuesta al empate
+(17, 'Gana local', 38999123),     -- Pronóstico 17: Carlos Gómez apuesta al local
+(18, 'Gana visitante', 46655987), -- Pronóstico 18: Valentina Torres apuesta al visitante
+(19, 'Gana local', 35566789),     -- Pronóstico 19: Martín Silva apuesta al local
+(20, 'Empate', 45778111);         -- Pronóstico 20: Ana Pereira apuesta al empate
 
 
 -- Inserciones para la tabla: partidos
@@ -318,14 +329,24 @@ INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
 -- INSERCIONES pronosticos_partidos
 
 INSERT INTO pronosticos_partidos(nro_pronostico, id_partido) VALUES
-(1, 1),   -- Pronóstico 1 asociado al Partido 1 (Torneo de Primera A - Arg)
-(2, 4),   -- Pronóstico 2 asociado al Partido 4 (Torneo de Primera A - Arg)
-(3, 10),  -- Pronóstico 3 asociado al Partido 10 (Torneo de Primera A - Arg)
-(4, 11),  -- Pronóstico 4 asociado al Partido 11 (Brasileirao - Bra)
-(5, 12),  -- Pronóstico 5 asociado al Partido 12 (Brasileirao - Bra)
-(6, 17),  -- Pronóstico 6 asociado al Partido 17 (Campeonato Uruguayo - Uru)
-(7, 21),  -- Pronóstico 7 asociado al Partido 21 (Torneo Chileno - Chi)
-(8, 25),  -- Pronóstico 8 asociado al Partido 25 (Torneo Paraguayo - Par)
-(9, 29),  -- Pronóstico 9 asociado al Partido 29 (La Liga - Esp)
-(10, 32); -- Pronóstico 10 asociado al Partido 32 (La Liga - Esp)
+(1, 1),    -- Pronóstico 1 asociado al Partido 1 (Torneo de Primera A - Arg)
+(2, 4),    -- Pronóstico 2 asociado al Partido 4 (Torneo de Primera A - Arg)
+(3, 10),   -- Pronóstico 3 asociado al Partido 10 (Torneo de Primera A - Arg)
+(4, 11),   -- Pronóstico 4 asociado al Partido 11 (Brasileirao - Bra)
+(5, 12),   -- Pronóstico 5 asociado al Partido 12 (Brasileirao - Bra)
+(6, 17),   -- Pronóstico 6 asociado al Partido 17 (Campeonato Uruguayo - Uru)
+(7, 21),   -- Pronóstico 7 asociado al Partido 21 (Torneo Chileno - Chi)
+(8, 25),   -- Pronóstico 8 asociado al Partido 25 (Torneo Paraguayo - Par)
+(9, 29),   -- Pronóstico 9 asociado al Partido 29 (La Liga - Esp)
+(10, 32),  -- Pronóstico 10 asociado al Partido 32 (La Liga - Esp)
+(11, 2),   -- Pronóstico 11 asociado al Partido 2 (Torneo de Primera A - Arg)
+(12, 5),   -- Pronóstico 12 asociado al Partido 5 (Torneo de Primera A - Arg)
+(13, 13),  -- Pronóstico 13 asociado al Partido 13 (Brasileirao - Bra)
+(14, 14),  -- Pronóstico 14 asociado al Partido 14 (Brasileirao - Bra)
+(15, 18),  -- Pronóstico 15 asociado al Partido 18 (Campeonato Uruguayo - Uru)
+(16, 22),  -- Pronóstico 16 asociado al Partido 22 (Torneo Chileno - Chi)
+(17, 26),  -- Pronóstico 17 asociado al Partido 26 (Torneo Paraguayo - Par)
+(18, 30),  -- Pronóstico 18 asociado al Partido 30 (La Liga - Esp)
+(19, 31),  -- Pronóstico 19 asociado al Partido 31 (La Liga - Esp)
+(20, 34);  -- Pronóstico 20 asociado al Partido 34 (La Liga - Esp)
 
