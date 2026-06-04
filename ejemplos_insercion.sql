@@ -36,6 +36,13 @@ INSERT INTO pronosticos_deportivos (nro_pronostico, pronostico_resultado, DNI) V
 (19, 'Gana local', 35566789),     -- Pronóstico 19: Martín Silva apuesta al local
 (20, 'Empate', 45778111);         -- Pronóstico 20: Ana Pereira apuesta al empate
 
+INSERT INTO torneos (nombre_torneo, pais, fecha_inicio, fecha_final) VALUES
+('Torneo de Primera A 2026', 'Argentina', '2026-05-10', '2026-07-12'),
+('Campeonato Brasileiro Serie A 2026', 'Brasil', '2026-05-10', '2026-06-14'),
+('Campeonato Uruguayo 2026', 'Uruguay', '2026-05-09', '2026-05-30'),
+('Primera Division de Chile 2026', 'Chile', '2026-05-10', '2026-05-31'),
+('Primera Division de Paraguay 2026', 'Paraguay', '2026-05-09', '2026-05-30'),
+('La Liga 2026', 'España', '2026-05-03', '2026-06-07');
 
 -- Inserciones para la tabla: partidos
 
