@@ -8,14 +8,6 @@ create table usuarios(
     primary key (DNI)
 );
 
-create table pronosticos_deportivos(
-  nro_pronostico int not null ,
-  pronostico_resultado varchar(32) check ( pronostico_resultado in ('Gana local', 'Gana visitante', 'Empate')),
-  DNI int not null,
-  primary key(nro_pronostico),
-  foreign key (DNI) references usuarios(DNI) on delete cascade
-);
-
 CREATE TABLE torneos(
     nombre_torneo VARCHAR(100) NOT NULL
     ,pais VARCHAR(100) NOT NULL
@@ -38,6 +30,14 @@ CREATE TABLE equipos(
     pais VARCHAR(50) NOT NULL,
     estadio VARCHAR(100) NOT NULL UNIQUE,
     PRIMARY KEY (nombre_equipo, pais)
+);
+
+create table pronosticos_deportivos(
+  nro_pronostico int not null ,
+  pronostico_resultado varchar(32) check ( pronostico_resultado in ('Gana local', 'Gana visitante', 'Empate')),
+  DNI int not null,
+  primary key(nro_pronostico),
+  foreign key (DNI) references usuarios(DNI) on delete cascade
 );
 
 
