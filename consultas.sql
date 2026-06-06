@@ -1,3 +1,9 @@
+--Registrar un usuario (Santiago)
+INSERT INTO usuarios(DNI, nombre, fecha_nacimiento, email, pais)
+VALUES (40876543, 'Agustin Romero',
+        '2000-09-14', 'agustin.romero@email.com',
+        'Argentina');
+
 --Registrar un equipo. (jesus)
 
 insert into equipos(nombre_equipo, pais, estadio) values
@@ -22,6 +28,10 @@ from usuarios
 group by pais
 order by cantidad_usuarios_por_pais desc;
 
+--Actualizar el nombre de un torneo (Santiago)
+UPDATE torneos
+SET nombre_torneo = 'Federal A'
+WHERE nombre_torneo = 'Argentino A'
 
 -- Eliminar un torneo de (Sebastian, igual esta la agarre para sumar alguna mas):
 
