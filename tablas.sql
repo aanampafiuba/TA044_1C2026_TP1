@@ -13,7 +13,7 @@ create table pronosticos_deportivos(
   pronostico_resultado varchar(32) check ( pronostico_resultado in ('Gana local', 'Gana visitante', 'Empate')),
   DNI int not null,
   primary key(nro_pronostico),
-  foreign key (DNI) references usuarios(DNI) on delete cascade
+  foreign key (DNI) references usuarios(DNI) on delete cascade on delete update
 );
 
 CREATE TABLE torneos(
