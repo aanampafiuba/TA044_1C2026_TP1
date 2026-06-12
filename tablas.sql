@@ -1,7 +1,7 @@
 -- Restricciones en DOMAIN
 
 create domain pais_valido as varchar(50)
-    check (value in ('Argentina', 'Brasil', 'Chile', 'Uruguay', 'Paraguay'));
+    check (value in ('Argentina', 'Brasil', 'Chile', 'Uruguay', 'Paraguay', 'España', 'Venezuela', 'Perú'));
 
 create domain dni_valido as int
     check (value between 1000000 and 99999999);
