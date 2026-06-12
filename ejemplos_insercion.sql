@@ -235,7 +235,7 @@ INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
 --Partidos Campeonato Uruguayo
 
 -- Partido 17
-INSERT INTO juega_un (nombre_equipo, pais, id_partido,打goles, rol) VALUES
+INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
 ('Peñarol', 'Uruguay', 17, 2, 'Local'),
 ('Nacional', 'Uruguay', 17, 1, 'Visitante');
 
