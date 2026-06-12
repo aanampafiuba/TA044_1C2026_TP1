@@ -13,28 +13,27 @@ insert into usuarios(DNI, nombre, fecha_nacimiento, email, pais) values
 (36211478, 'Javier Morales', '1999-08-14', 'jmorales99@gmail.com', 'Perú');
 
 --Inseciones para tabla: pronosticos_deportivos
---necesito modificar igual esto para cuando esten los ejemplos de insercion de usuarios
-INSERT INTO pronosticos_deportivos (nro_pronostico, pronostico_resultado, DNI) VALUES
-(1, 'Gana local', 45111222),      -- Pronóstico 1: José Rios apuesta al local en el Partido 1
-(2, 'Empate', 45111222),          -- Pronóstico 2: José Rios apuesta al empate en el Partido 4
-(3, 'Gana visitante', 32874165),  -- Pronóstico 3: Maria Cruz apuesta al visitante en el Partido 10
-(4, 'Gana local', 38999123),      -- Pronóstico 4: Carlos Gómez apuesta al local en el Partido 11
-(5, 'Empate', 37222456),          -- Pronóstico 5: Santiago López apuesta al empate en el Partido 12
-(6, 'Gana local', 46655987),      -- Pronóstico 6: Valentina Torres apuesta al local en el Partido 17
-(7, 'Gana visitante', 35566789),  -- Pronóstico 7: Martín Silva apuesta al visitante en el Partido 21
-(8, 'Gana local', 47899112),      -- Pronóstico 8: Camila Duarte apuesta al local en el Partido 25
-(9, 'Empate', 45111222),          -- Pronóstico 9: José Rios apuesta al empate en el Partido 29
-(10, 'Gana visitante', 32874165), -- Pronóstico 10: Maria Cruz apuesta al visitante en el Partido 32
-(11, 'Gana visitante', 38999123), -- Pronóstico 11: Carlos Gómez apuesta al visitante
-(12, 'Gana local', 45778111),     -- Pronóstico 12: Ana Pereira (suma su primer pronóstico)
-(13, 'Empate', 35566789),         -- Pronóstico 13: Martín Silva apuesta al empate
-(14, 'Gana local', 47899112),     -- Pronóstico 14: Camila Duarte apuesta al local
-(15, 'Gana visitante', 45111222), -- Pronóstico 15: Jose Rios suma otra jugada
-(16, 'Empate', 32874165),         -- Pronóstico 16: Maria Cruz apuesta al empate
-(17, 'Gana local', 38999123),     -- Pronóstico 17: Carlos Gómez apuesta al local
-(18, 'Gana visitante', 46655987), -- Pronóstico 18: Valentina Torres apuesta al visitante
-(19, 'Gana local', 35566789),     -- Pronóstico 19: Martín Silva apuesta al local
-(20, 'Empate', 45778111);         -- Pronóstico 20: Ana Pereira apuesta al empate
+INSERT INTO pronosticos_deportivos (DNI) VALUES
+(45111222),      -- Pronóstico 1
+(45111222),      -- Pronóstico 2
+(32874165),      -- Pronóstico 3
+(38999123),      -- Pronóstico 4
+(37222456),      -- Pronóstico 5
+(46655987),      -- Pronóstico 6
+(35566789),      -- Pronóstico 7
+(47899112),      -- Pronóstico 8
+(45111222),      -- Pronóstico 9
+(32874165),      -- Pronóstico 10
+(38999123),      -- Pronóstico 11
+(45778111),      -- Pronóstico 12
+(35566789),      -- Pronóstico 13
+(47899112),      -- Pronóstico 14
+(45111222),      -- Pronóstico 15
+(32874165),      -- Pronóstico 16
+(38999123),      -- Pronóstico 17
+(46655987),      -- Pronóstico 18
+(35566789),      -- Pronóstico 19
+(45778111);      -- Pronóstico 20
 
 INSERT INTO torneos (nombre_torneo, pais, fecha_inicio, fecha_final) VALUES
 ('Torneo de Primera A 2026', 'Argentina', '2026-05-10', '2026-07-12'),
@@ -45,58 +44,60 @@ INSERT INTO torneos (nombre_torneo, pais, fecha_inicio, fecha_final) VALUES
 ('La Liga 2026', 'España', '2026-05-03', '2026-06-07');
 
 -- Inserciones para la tabla: partidos
+-- Se quita el id_partido porque ahora es GENERATED ALWAYS AS IDENTITY
+-- Los ids se generarán del 1 al 34 en orden
 
 -- Partidos del Torneo de Primera A 2026
-INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES 
-(1, '2026-05-10', 'Torneo de Primera A 2026'),
-(2, '2026-05-17', 'Torneo de Primera A 2026'),
-(3, '2026-05-24', 'Torneo de Primera A 2026'),
-(4, '2026-05-31', 'Torneo de Primera A 2026'),
-(5, '2026-06-07', 'Torneo de Primera A 2026'),
-(6, '2026-06-14', 'Torneo de Primera A 2026'),
-(7, '2026-06-21', 'Torneo de Primera A 2026'),
-(8, '2026-06-28', 'Torneo de Primera A 2026'),
-(9, '2026-07-05', 'Torneo de Primera A 2026'),
-(10, '2026-07-12', 'Torneo de Primera A 2026');
+INSERT INTO partidos (fecha, nombre_torneo) VALUES 
+('2026-05-10', 'Torneo de Primera A 2026'),
+('2026-05-17', 'Torneo de Primera A 2026'),
+('2026-05-24', 'Torneo de Primera A 2026'),
+('2026-05-31', 'Torneo de Primera A 2026'),
+('2026-06-07', 'Torneo de Primera A 2026'),
+('2026-06-14', 'Torneo de Primera A 2026'),
+('2026-06-21', 'Torneo de Primera A 2026'),
+('2026-06-28', 'Torneo de Primera A 2026'),
+('2026-07-05', 'Torneo de Primera A 2026'),
+('2026-07-12', 'Torneo de Primera A 2026');
 
 -- Partidos de Brasileirao (Campeonato Brasileiro Serie A 2026)
-INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES
-(11, '2026-05-10', 'Campeonato Brasileiro Serie A 2026'),
-(12, '2026-05-17', 'Campeonato Brasileiro Serie A 2026'),
-(13, '2026-05-24', 'Campeonato Brasileiro Serie A 2026'),
-(14, '2026-05-31', 'Campeonato Brasileiro Serie A 2026'),
-(15, '2026-06-07', 'Campeonato Brasileiro Serie A 2026'),
-(16, '2026-06-14', 'Campeonato Brasileiro Serie A 2026');
+INSERT INTO partidos (fecha, nombre_torneo) VALUES
+('2026-05-10', 'Campeonato Brasileiro Serie A 2026'),
+('2026-05-17', 'Campeonato Brasileiro Serie A 2026'),
+('2026-05-24', 'Campeonato Brasileiro Serie A 2026'),
+('2026-05-31', 'Campeonato Brasileiro Serie A 2026'),
+('2026-06-07', 'Campeonato Brasileiro Serie A 2026'),
+('2026-06-14', 'Campeonato Brasileiro Serie A 2026');
 
 -- Torneo uruguayo (Campeonato Uruguayo 2026)
-INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES
-(17, '2026-05-09', 'Campeonato Uruguayo 2026'),
-(18, '2026-05-16', 'Campeonato Uruguayo 2026'),
-(19, '2026-05-23', 'Campeonato Uruguayo 2026'),
-(20, '2026-05-30', 'Campeonato Uruguayo 2026');
+INSERT INTO partidos (fecha, nombre_torneo) VALUES
+('2026-05-09', 'Campeonato Uruguayo 2026'),
+('2026-05-16', 'Campeonato Uruguayo 2026'),
+('2026-05-23', 'Campeonato Uruguayo 2026'),
+('2026-05-30', 'Campeonato Uruguayo 2026');
 
 -- Torneo chileno (Primera Division de Chile 2026)
-INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES
-(21, '2026-05-10', 'Primera Division de Chile 2026'),
-(22, '2026-05-17', 'Primera Division de Chile 2026'),
-(23, '2026-05-24', 'Primera Division de Chile 2026'),
-(24, '2026-05-31', 'Primera Division de Chile 2026');
+INSERT INTO partidos (fecha, nombre_torneo) VALUES
+('2026-05-10', 'Primera Division de Chile 2026'),
+('2026-05-17', 'Primera Division de Chile 2026'),
+('2026-05-24', 'Primera Division de Chile 2026'),
+('2026-05-31', 'Primera Division de Chile 2026');
 
 -- Torneo paraguayo (Primera Division de Paraguay 2026)
-INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES
-(25, '2026-05-09', 'Primera Division de Paraguay 2026'),
-(26, '2026-05-16', 'Primera Division de Paraguay 2026'),
-(27, '2026-05-23', 'Primera Division de Paraguay 2026'),
-(28, '2026-05-30', 'Primera Division de Paraguay 2026');
+INSERT INTO partidos (fecha, nombre_torneo) VALUES
+('2026-05-09', 'Primera Division de Paraguay 2026'),
+('2026-05-16', 'Primera Division de Paraguay 2026'),
+('2026-05-23', 'Primera Division de Paraguay 2026'),
+('2026-05-30', 'Primera Division de Paraguay 2026');
 
 -- Torneo español (La Liga 2026)
-INSERT INTO partidos (id_partido, fecha, nombre_torneo) VALUES
-(29, '2026-05-03', 'La Liga 2026'),
-(30, '2026-05-10', 'La Liga 2026'),
-(31, '2026-05-17', 'La Liga 2026'),
-(32, '2026-05-24', 'La Liga 2026'),
-(33, '2026-05-31', 'La Liga 2026'),
-(34, '2026-06-07', 'La Liga 2026');
+INSERT INTO partidos (fecha, nombre_torneo) VALUES
+('2026-05-03', 'La Liga 2026'),
+('2026-05-10', 'La Liga 2026'),
+('2026-05-17', 'La Liga 2026'),
+('2026-05-24', 'La Liga 2026'),
+('2026-05-31', 'La Liga 2026'),
+('2026-06-07', 'La Liga 2026');
 
 
 -- Insercion de equipos
@@ -335,25 +336,24 @@ INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
 
 -- INSERCIONES pronosticos_partidos
 
-INSERT INTO pronosticos_partidos(nro_pronostico, id_partido) VALUES
-(1, 1),    -- Pronóstico 1 asociado al Partido 1 (Torneo de Primera A - Arg)
-(2, 4),    -- Pronóstico 2 asociado al Partido 4 (Torneo de Primera A - Arg)
-(3, 10),   -- Pronóstico 3 asociado al Partido 10 (Torneo de Primera A - Arg)
-(4, 11),   -- Pronóstico 4 asociado al Partido 11 (Brasileirao - Bra)
-(5, 12),   -- Pronóstico 5 asociado al Partido 12 (Brasileirao - Bra)
-(6, 17),   -- Pronóstico 6 asociado al Partido 17 (Campeonato Uruguayo - Uru)
-(7, 21),   -- Pronóstico 7 asociado al Partido 21 (Torneo Chileno - Chi)
-(8, 25),   -- Pronóstico 8 asociado al Partido 25 (Torneo Paraguayo - Par)
-(9, 29),   -- Pronóstico 9 asociado al Partido 29 (La Liga - Esp)
-(10, 32),  -- Pronóstico 10 asociado al Partido 32 (La Liga - Esp)
-(11, 2),   -- Pronóstico 11 asociado al Partido 2 (Torneo de Primera A - Arg)
-(12, 5),   -- Pronóstico 12 asociado al Partido 5 (Torneo de Primera A - Arg)
-(13, 13),  -- Pronóstico 13 asociado al Partido 13 (Brasileirao - Bra)
-(14, 14),  -- Pronóstico 14 asociado al Partido 14 (Brasileirao - Bra)
-(15, 18),  -- Pronóstico 15 asociado al Partido 18 (Campeonato Uruguayo - Uru)
-(16, 22),  -- Pronóstico 16 asociado al Partido 22 (Torneo Chileno - Chi)
-(17, 26),  -- Pronóstico 17 asociado al Partido 26 (Torneo Paraguayo - Par)
-(18, 30),  -- Pronóstico 18 asociado al Partido 30 (La Liga - Esp)
-(19, 31),  -- Pronóstico 19 asociado al Partido 31 (La Liga - Esp)
-(20, 34);  -- Pronóstico 20 asociado al Partido 34 (La Liga - Esp)
-
+INSERT INTO pronosticos_partidos(id_pronostico, id_partido, pronostico_resultado) VALUES
+(1, 1, 'Gana local'),
+(2, 4, 'Empate'),
+(3, 10, 'Gana visitante'),
+(4, 11, 'Gana local'),
+(5, 12, 'Empate'),
+(6, 17, 'Gana local'),
+(7, 21, 'Gana visitante'),
+(8, 25, 'Gana local'),
+(9, 29, 'Empate'),
+(10, 32, 'Gana visitante'),
+(11, 2, 'Gana visitante'),
+(12, 5, 'Gana local'),
+(13, 13, 'Empate'),
+(14, 14, 'Gana local'),
+(15, 18, 'Gana visitante'),
+(16, 22, 'Empate'),
+(17, 26, 'Gana local'),
+(18, 30, 'Gana visitante'),
+(19, 31, 'Gana local'),
+(20, 34, 'Empate');
