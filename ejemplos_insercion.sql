@@ -483,32 +483,6 @@ JOIN (
 ) AS datos(id_partido, pronostico_resultado)
 ON TRUE;
 
-
-
-WITH pronostico_del_usuario AS (
-  INSERT INTO pronosticos_deportivos (dni)
-  VALUES (96265253)
-  RETURNING id_pronostico
-)
-INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
-SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
-FROM pronostico_del_usuario
-JOIN (
-  VALUES
-    (1, 'Gana local'),
-    (2, 'Empate'),
-    (3, 'Gana visitante'),
-    (4, 'Gana local'),
-    (5, 'Empate'),
-    (6, 'Gana visitante'),
-    (7, 'Gana local'),
-    (8, 'Empate'),
-    (9, 'Gana visitante'),
-    (10, 'Gana local')
-) AS datos(id_partido, pronostico_resultado)
-ON TRUE;
-
-
 WITH pronostico_del_usuario AS (
   INSERT INTO pronosticos_deportivos (dni)
   VALUES (45111222)
