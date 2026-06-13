@@ -29,6 +29,7 @@ Ventajas:
 create table usuarios(
     DNI dni_valido not null,
     nombre varchar(32) not null,
+    apellido varchar(32) not null,
     fecha_nacimiento date not null check (fecha_nacimiento <= CURRENT_DATE),
     email email_valido NOT NULL unique,
     pais pais_valido not null,
