@@ -12,28 +12,6 @@ insert into usuarios(DNI, nombre, apellido, fecha_nacimiento, email, pais) value
 (47899112, 'Camila', 'Duarte', '2005-12-05', 'camidu05@gmail.com', 'Venezuela'),
 (36211478, 'Javier', 'Morales', '1999-08-14', 'jmorales99@gmail.com', 'Perú');
 
---Inseciones para tabla: pronosticos_deportivos
-INSERT INTO pronosticos_deportivos (DNI) VALUES
-(45111222),      -- Pronóstico 1
-(45111222),      -- Pronóstico 2
-(32874165),      -- Pronóstico 3
-(38999123),      -- Pronóstico 4
-(37222456),      -- Pronóstico 5
-(46655987),      -- Pronóstico 6
-(35566789),      -- Pronóstico 7
-(47899112),      -- Pronóstico 8
-(45111222),      -- Pronóstico 9
-(32874165),      -- Pronóstico 10
-(38999123),      -- Pronóstico 11
-(45778111),      -- Pronóstico 12
-(35566789),      -- Pronóstico 13
-(47899112),      -- Pronóstico 14
-(45111222),      -- Pronóstico 15
-(32874165),      -- Pronóstico 16
-(38999123),      -- Pronóstico 17
-(46655987),      -- Pronóstico 18
-(35566789),      -- Pronóstico 19
-(45778111);      -- Pronóstico 20
 
 INSERT INTO torneos (nombre_torneo, pais, fecha_inicio, fecha_final) VALUES
 ('Torneo de Primera A 2026', 'Argentina', '2026-05-10', '2026-07-12'),
@@ -336,24 +314,361 @@ INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
 
 -- INSERCIONES pronosticos_partidos
 
-INSERT INTO pronosticos_partidos(id_pronostico, id_partido, pronostico_resultado) VALUES
-(1, 1, 'Gana local'),
-(2, 4, 'Empate'),
-(3, 10, 'Gana visitante'),
-(4, 11, 'Gana local'),
-(5, 12, 'Empate'),
-(6, 17, 'Gana local'),
-(7, 21, 'Gana visitante'),
-(8, 25, 'Gana local'),
-(9, 29, 'Empate'),
-(10, 32, 'Gana visitante'),
-(11, 2, 'Gana visitante'),
-(12, 5, 'Gana local'),
-(13, 13, 'Empate'),
-(14, 14, 'Gana local'),
-(15, 18, 'Gana visitante'),
-(16, 22, 'Empate'),
-(17, 26, 'Gana local'),
-(18, 30, 'Gana visitante'),
-(19, 31, 'Gana local'),
-(20, 34, 'Empate');
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (45111222)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (29, 'Gana local'),
+    (30, 'Empate'),
+    (31, 'Gana visitante'),
+    (32, 'Gana local'),
+    (33, 'Empate'),
+    (34, 'Gana visitante')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (32874165)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (29, 'Gana visitante'),
+    (30, 'Gana local'),
+    (31, 'Empate'),
+    (32, 'Gana visitante'),
+    (33, 'Gana local'),
+    (34, 'Empate')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (38999123)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (29, 'Empate'),
+    (30, 'Gana visitante'),
+    (31, 'Gana local'),
+    (32, 'Empate'),
+    (33, 'Gana visitante'),
+    (34, 'Gana local')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (45778111)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (17, 'Gana local'),
+    (18, 'Empate'),
+    (19, 'Gana visitante'),
+    (20, 'Gana local')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (37222456)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (17, 'Empate'),
+    (18, 'Gana visitante'),
+    (19, 'Gana local'),
+    (20, 'Empate')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (46655987)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (17, 'Gana visitante'),
+    (18, 'Gana local'),
+    (19, 'Empate'),
+    (20, 'Gana visitante')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (35566789)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (25, 'Gana local'),
+    (26, 'Gana visitante'),
+    (27, 'Empate'),
+    (28, 'Gana local')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (47899112)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (25, 'Empate'),
+    (26, 'Gana local'),
+    (27, 'Gana visitante'),
+    (28, 'Empate')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (36211478)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (25, 'Gana visitante'),
+    (26, 'Empate'),
+    (27, 'Gana local'),
+    (28, 'Gana visitante')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (96265253)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (1, 'Gana local'),
+    (2, 'Empate'),
+    (3, 'Gana visitante'),
+    (4, 'Gana local'),
+    (5, 'Empate'),
+    (6, 'Gana visitante'),
+    (7, 'Gana local'),
+    (8, 'Empate'),
+    (9, 'Gana visitante'),
+    (10, 'Gana local')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (45111222)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (1, 'Gana visitante'),
+    (2, 'Gana local'),
+    (3, 'Empate'),
+    (4, 'Gana visitante'),
+    (5, 'Gana local'),
+    (6, 'Empate'),
+    (7, 'Gana visitante'),
+    (8, 'Gana local'),
+    (9, 'Empate'),
+    (10, 'Gana visitante')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (32874165)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (1, 'Empate'),
+    (2, 'Gana visitante'),
+    (3, 'Gana local'),
+    (4, 'Empate'),
+    (5, 'Gana visitante'),
+    (6, 'Gana local'),
+    (7, 'Empate'),
+    (8, 'Gana visitante'),
+    (9, 'Gana local'),
+    (10, 'Empate')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (38999123)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (11, 'Gana local'),
+    (12, 'Empate'),
+    (13, 'Gana visitante'),
+    (14, 'Gana local'),
+    (15, 'Empate'),
+    (16, 'Gana visitante')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (45778111)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (11, 'Gana visitante'),
+    (12, 'Gana local'),
+    (13, 'Empate'),
+    (14, 'Gana visitante'),
+    (15, 'Gana local'),
+    (16, 'Empate')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (37222456)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (11, 'Empate'),
+    (12, 'Gana visitante'),
+    (13, 'Gana local'),
+    (14, 'Empate'),
+    (15, 'Gana visitante'),
+    (16, 'Gana local')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (46655987)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (21, 'Gana local'),
+    (22, 'Empate'),
+    (23, 'Gana visitante'),
+    (24, 'Gana local')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (35566789)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (21, 'Empate'),
+    (22, 'Gana visitante'),
+    (23, 'Gana local'),
+    (24, 'Empate')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
+
+WITH pronostico_del_usuario AS (
+  INSERT INTO pronosticos_deportivos (dni)
+  VALUES (47899112)
+  RETURNING id_pronostico
+)
+INSERT INTO pronosticos_partidos (id_pronostico, id_partido, pronostico_resultado)
+SELECT id_pronostico, datos.id_partido, datos.pronostico_resultado
+FROM pronostico_del_usuario
+JOIN (
+  VALUES
+    (21, 'Gana visitante'),
+    (22, 'Gana local'),
+    (23, 'Empate'),
+    (24, 'Gana visitante')
+) AS datos(id_partido, pronostico_resultado)
+ON TRUE;
+
