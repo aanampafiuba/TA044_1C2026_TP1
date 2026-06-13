@@ -144,28 +144,6 @@ VALUES ('Boca Juniors', 'Argentina', 'Alberto J. Armando'),
        ('Real Betis', 'España', 'Estadio Benito Villamarin'),
        ('Athletic Club', 'España', 'Estadio San Mames');
 
---Inseciones para tabla: pronosticos_deportivos
-INSERT INTO pronosticos_deportivos (nro_pronostico, pronostico_resultado, DNI) VALUES
-(1, 'Gana local', 45111222),      -- Pronóstico 1: José Rios apuesta al local en el Partido 1
-(2, 'Empate', 45111222),          -- Pronóstico 2: José Rios apuesta al empate en el Partido 4
-(3, 'Gana visitante', 32874165),  -- Pronóstico 3: Maria Cruz apuesta al visitante en el Partido 10
-(4, 'Gana local', 38999123),      -- Pronóstico 4: Carlos Gómez apuesta al local en el Partido 11
-(5, 'Empate', 37222456),          -- Pronóstico 5: Santiago López apuesta al empate en el Partido 12
-(6, 'Gana local', 46655987),      -- Pronóstico 6: Valentina Torres apuesta al local en el Partido 17
-(7, 'Gana visitante', 35566789),  -- Pronóstico 7: Martín Silva apuesta al visitante en el Partido 21
-(8, 'Gana local', 47899112),      -- Pronóstico 8: Camila Duarte apuesta al local en el Partido 25
-(9, 'Empate', 45111222),          -- Pronóstico 9: José Rios apuesta al empate en el Partido 29
-(10, 'Gana visitante', 32874165), -- Pronóstico 10: Maria Cruz apuesta al visitante en el Partido 32
-(11, 'Gana visitante', 38999123), -- Pronóstico 11: Carlos Gómez apuesta al visitante
-(12, 'Gana local', 45778111),     -- Pronóstico 12: Ana Pereira (suma su primer pronóstico)
-(13, 'Empate', 35566789),         -- Pronóstico 13: Martín Silva apuesta al empate
-(14, 'Gana local', 47899112),     -- Pronóstico 14: Camila Duarte apuesta al local
-(15, 'Gana visitante', 45111222), -- Pronóstico 15: Jose Rios suma otra jugada
-(16, 'Empate', 32874165),         -- Pronóstico 16: Maria Cruz apuesta al empate
-(17, 'Gana local', 38999123),     -- Pronóstico 17: Carlos Gómez apuesta al local
-(18, 'Gana visitante', 46655987), -- Pronóstico 18: Valentina Torres apuesta al visitante
-(19, 'Gana local', 35566789),     -- Pronóstico 19: Martín Silva apuesta al local
-(20, 'Empate', 45778111);         -- Pronóstico 20: Ana Pereira apuesta al empate
 
 --INSERCIONES PARA TABLAS RELACIONES
 
