@@ -14,6 +14,21 @@ create domain email_valido as varchar(100)
         value like '%@outlook.com'
     );
 
+-- Creación de vista
+CREATE VIEW resultados_partidos AS
+SELECT
+    p.id_partido,
+    p.fecha,
+    p.nombre_torneo,
+    CASE
+        WHEN j1.goles > j2.goles THEN 'Gana local'
+        WHEN j1.goles < j2.goles THEN 'Gana visitante'
+        ELSE 'Empate'
+    END AS resultado_real
+FROM partidos p
+JOIN juega_un j1 ON j1.id_partido = p.id_partido AND j1.rol = 'Local'
+JOIN juega_un j2 ON j2.id_partido = p.id_partido AND j2.rol = 'Visitante';
+
 -- Creación de tablas con cambios realizados
 
 /*
