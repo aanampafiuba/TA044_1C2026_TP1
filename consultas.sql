@@ -4,6 +4,10 @@ VALUES (40876543, 'Agustin Romero',
         '2000-09-14', 'agustin.romero@email.com',
         'Argentina');
 
+--Registrar un torneo. (nazareno)
+INSERT INTO torneos (nombre_torneo, pais, fecha_inicio, fecha_final) 
+VALUES ('Torneo Clausura 2026', 'Argentina', '2026-08-01', '2026-12-15');
+
 --Registrar un equipo. (jesus)
 
 insert into equipos(nombre_equipo, pais, estadio) values
@@ -19,7 +23,9 @@ update juega_un
 set goles = 1
 where id_partido = 1 and rol = 'visitante';
 
-
+-- Listar todos los usuarios de la aplicación. ( nazareno )
+SELECT DNI, nombre, fecha_nacimiento, email, pais
+FROM usuarios;
 
 --Contabilizar la cantidad de usuarios, agrupados por pais (Sebastian):
 
