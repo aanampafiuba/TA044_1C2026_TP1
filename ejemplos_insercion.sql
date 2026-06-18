@@ -12,6 +12,27 @@ insert into usuarios(DNI, nombre, apellido, fecha_nacimiento, email, pais) value
 (47899112, 'Camila', 'Duarte', '2005-12-05', 'camidu05@gmail.com', 'Venezuela'),
 (36211478, 'Javier', 'Morales', '1999-08-14', 'jmorales99@gmail.com', 'Perú');
 
+INSERT INTO historial_ingresos (DNI) VALUES (45111222);
+
+INSERT INTO historial_ingresos (DNI) VALUES
+(32874165),
+(38999123),
+(45778111),
+(37222456);
+
+--otra forma de insertar:
+INSERT INTO historial_ingresos (DNI, fecha_hora) VALUES
+(45111222, '2026-06-10 09:30:00'),
+(45111222, '2026-06-11 15:45:22'),
+(45111222, '2026-06-12 21:00:05'),
+
+(32874165, '2026-06-12 10:15:00'),
+(32874165, '2026-06-14 18:20:40'),
+
+(38999123, '2026-06-15 08:00:00'),
+(38999123, '2026-06-15 20:30:15');
+
+
 
 INSERT INTO torneos (nombre_torneo, pais, fecha_inicio, fecha_final) VALUES
 ('Torneo de Primera A 2026', 'Argentina', '2026-05-10', '2026-07-12'),
