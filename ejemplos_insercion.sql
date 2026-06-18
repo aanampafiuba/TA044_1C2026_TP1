@@ -1,6 +1,6 @@
 --INSERCIONES PARA TABLAS ENTIDADES
 
---inserciones para tabla: usuarios
+--Inserciones para tabla: usuarios
 insert into usuarios(DNI, nombre, apellido, fecha_nacimiento, email, pais) values
 (45111222, 'Jose', 'Rios', '2004-05-05', 'jrios@gmail.com', 'Argentina'),
 (32874165, 'Maria', 'Cruz', '1999-06-04', 'mgcruz1999@hotmail.com', 'Uruguay'),
@@ -12,23 +12,23 @@ insert into usuarios(DNI, nombre, apellido, fecha_nacimiento, email, pais) value
 (47899112, 'Camila', 'Duarte', '2005-12-05', 'camidu05@gmail.com', 'Venezuela'),
 (36211478, 'Javier', 'Morales', '1999-08-14', 'jmorales99@gmail.com', 'Perú');
 
-INSERT INTO historial_ingresos (DNI) VALUES (45111222);
 
-INSERT INTO historial_ingresos (DNI) VALUES
+--Inserciones para la tabla: ingresos
+INSERT INTO ingresos (DNI) VALUES (45111222);
+
+INSERT INTO ingresos (DNI) VALUES
 (32874165),
 (38999123),
 (45778111),
 (37222456);
 
 --otra forma de insertar:
-INSERT INTO historial_ingresos (DNI, fecha_hora) VALUES
+INSERT INTO ingresos (DNI, fecha_hora) VALUES
 (45111222, '2026-06-10 09:30:00'),
 (45111222, '2026-06-11 15:45:22'),
 (45111222, '2026-06-12 21:00:05'),
-
 (32874165, '2026-06-12 10:15:00'),
 (32874165, '2026-06-14 18:20:40'),
-
 (38999123, '2026-06-15 08:00:00'),
 (38999123, '2026-06-15 20:30:15');
 
@@ -333,7 +333,7 @@ INSERT INTO juega_un (nombre_equipo, pais, id_partido, goles, rol) VALUES
 ('Real Madrid', 'España', 34, 0, 'Visitante');
 
 
--- INSERCIONES pronosticos_partidos
+-- Inserciones para pronosticos_partidos
 
 WITH pronostico_del_usuario AS (
   INSERT INTO pronosticos_deportivos (dni)

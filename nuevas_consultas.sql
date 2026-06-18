@@ -1,10 +1,11 @@
---Registrar un torneo. (nazareno)
+--Registrar un torneo.
 INSERT INTO torneos (nombre_torneo, pais, fecha_inicio, fecha_final)
 VALUES ('Torneo Clausura 2026', 'Argentina', '2026-08-01', '2026-12-15');
 
 --Registrar un equipo
 
-
+INSERT INTO equipos(nombre_equipo, pais, estadio) VALUES
+('River Plate', 'Argentina', 'Más Monumental');
 
 -- Registrar un pronostico deportivo
 WITH pronostico_del_usuario AS
@@ -35,11 +36,14 @@ VALUES ('River Plate','Argentina','9','0','Visitante');
 
 
 -- Listar todos los usuarios de la aplicación
-SELECT DNI, nombre, fecha_nacimiento, email, pais
+SELECT DNI, nombre, apellido, fecha_nacimiento, email, pais
 FROM usuarios;
 
 --  Listar los resultados de todos los partidos del torneo
 
+SELECT nombre_torneo, id_partido, resultado_real
+FROM resultados_partidos
+WHERE nombre_torneo = 'Torneo de Primera A 2026';
 
 -- Listar los aciertos por usuario
 SELECT u.dni, u.email, pp.pronostico_resultado as pronostico_usuario, rp.resultado_real as resultado_Real
@@ -67,8 +71,8 @@ where nombre_torneo = 'Copa Argentina';
 
 
 --Desregistrar a un usuario de la aplicación
-INSERT INTO usuarios(DNI, nombre, fecha_nacimiento, email, pais)
-VALUES (75888999, 'Don Ramon', '1924-07-02', 'donramon@gmail.com', 'Argentina');
+INSERT INTO usuarios(DNI, nombre, apellido, fecha_nacimiento, email, pais)
+VALUES (75888999, 'Don', 'Ramon', '1924-07-02', 'donramon@gmail.com', 'Argentina');
 
 DELETE
 FROM usuarios
