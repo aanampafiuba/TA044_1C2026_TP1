@@ -51,6 +51,16 @@ create table usuarios(
     primary key (DNI)
 );
 
+-- Historial Ingresos:
+create table historial_ingresos(
+    DNI dni_valido not null,
+    fecha_hora timestamp not null default current_timestamp,
+
+    primary key(DNI,fecha_hora),
+    foreign key (dni) references usuarios(DNI) on delete cascade
+);
+
+
 /*
 Torneos:
     - el pais se valida con el domain establecido
