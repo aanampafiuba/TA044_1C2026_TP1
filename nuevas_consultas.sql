@@ -73,7 +73,7 @@ WHERE nombre_torneo = 'Campeonato Brasileiro Serie A 2026';
 -- Eliminar un torneo
 delete
 from torneos
-where nombre_torneo = 'Copa Argentina';
+where nombre_torneo = 'Torneo de Primera A 2026';
 
 
 --Desregistrar a un usuario de la aplicación
