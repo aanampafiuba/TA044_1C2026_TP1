@@ -1,7 +1,7 @@
 --Registrar un usuario
 INSERT INTO usuarios(dni, nombre, apellido, fecha_nacimiento, email, pais)
 VALUES (40876543, 'Agustin', 'Romero',
-        '2000-09-14', 'agustin.romero@email.com',
+        '2000-09-14', 'agustin.romero@gmail.com',
         'Argentina');
 
 --Registrar un torneo.
