@@ -1,3 +1,9 @@
+--Registrar un usuario
+INSERT INTO usuarios(dni, nombre, apellido, fecha_nacimiento, email, pais)
+VALUES (40876543, 'Agustin', 'Romero',
+        '2000-09-14', 'agustin.romero@email.com',
+        'Argentina');
+
 --Registrar un torneo.
 INSERT INTO torneos (nombre_torneo, pais, fecha_inicio, fecha_final)
 VALUES ('Torneo Clausura 2026', 'Argentina', '2026-08-01', '2026-12-15');
