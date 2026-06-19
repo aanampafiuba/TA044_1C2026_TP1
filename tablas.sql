@@ -14,18 +14,8 @@ create domain email_valido as varchar(100)
         value like '%@outlook.com'
     );
 
--- Creación de tablas con cambios realizados
+-- Creación de tablas
 
-/*
-Usuarios:
-    - usa un dni valido que entre dentro del rango genérico
-    - cumple restriccion de pais que exige el tp
-    - fecha de nacimiento asegura que no sea la fecha actual
-    - cumple dominio de email
-Ventajas:
-    - Cuando cambie la forma de usar el dni lo cambio desde el domain sin entrar directo.
-    - Lo mismo aplica para los demas campos que usan domain
-*/
 create table usuarios(
     DNI dni_valido not null,
     nombre varchar(32) not null,
@@ -36,7 +26,7 @@ create table usuarios(
     primary key (DNI)
 );
 
--- Ingresos:
+
 create table ingresos(
     DNI dni_valido not null,
     fecha_hora timestamp not null default current_timestamp,
@@ -44,12 +34,6 @@ create table ingresos(
     foreign key (dni) references usuarios(DNI) on delete cascade
 );
 
-
-/*
-Torneos:
-    - el pais se valida con el domain establecido
-    - se valida que fecha final sea despues de la fecha inicio
-*/
 CREATE TABLE torneos(
     nombre_torneo VARCHAR(100) NOT NULL
     ,pais pais_valido NOT NULL
@@ -58,14 +42,6 @@ CREATE TABLE torneos(
     ,PRIMARY KEY(nombre_torneo)
     ,CONSTRAINT chk_fechas_torneo CHECK (fecha_inicio < fecha_final)
 );
-
-/*
-Partidos:
-    - El id es autoincremental
-    - Se podría hacer que la fecha corresponda dentro de los limites del torneo
-        pero es mas extenso. Un trigger medio complejo para lo que pide la catedra
-    - Agrego CASCADE por si se modifica el nombre del torneo
-*/
 
 CREATE TABLE partidos (
     id_partido INT GENERATED ALWAYS AS IDENTITY,
@@ -78,12 +54,6 @@ CREATE TABLE partidos (
         ON UPDATE CASCADE
 );
 
-
-/*
-Equipos:
-    - Valido el pais con el domain
-*/
-
 CREATE TABLE equipos(
     nombre_equipo VARCHAR(100) NOT NULL,
     pais pais_valido NOT NULL,
@@ -91,26 +61,12 @@ CREATE TABLE equipos(
     PRIMARY KEY (nombre_equipo, pais)
 );
 
-/*
-Pronostico Deportivo:
-    - Id asemeja a los otros ids subrrogados
-    - El pronostico es autoincremental
-    - Dni validado por domain
-*/
 create table pronosticos_deportivos(
   id_pronostico int generated always as identity,
   DNI dni_valido not null,
   primary key(id_pronostico),
   foreign key (DNI) references usuarios(DNI) on delete cascade
 );
-
-
--- Relaciones
-
-/*
-Pronostico partido:
-    - agrego el campo de resultado para que sea mas logico
-*/
 
 create table pronosticos_partidos(
     id_pronostico int not null,
@@ -121,12 +77,6 @@ create table pronosticos_partidos(
     foreign key (id_partido) references partidos(id_partido) on delete cascade
 );
 
-
-/*
-Juega un:
-    - Modifico el pais valido con domain
-    - Agrego UPDATE ON CASCADE por si el nombre del equipo cambia
-*/
 CREATE TABLE juega_un (
     nombre_equipo VARCHAR(100) NOT NULL,
     pais pais_valido NOT NULL,
